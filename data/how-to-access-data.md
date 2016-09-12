@@ -1,6 +1,7 @@
 ### Accessing data
 
 #### From the web
+In the command box, write:
 ```
 ssc install bcuse
 bcuse wage1
