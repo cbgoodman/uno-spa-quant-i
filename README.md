@@ -7,7 +7,7 @@ Wooldridge, Jeffrey M. 2016. [*Introductory Econometrics: A Modern Approach*](ht
 Kennedy, Peter. 2008. [*A Guide to Econometrics*](https://www.amazon.com/Guide-Econometrics-6th-Peter-Kennedy/dp/1405182571) 6e. Wiley-Blackwell.
 
 ## Useful Resources
-Baum, Christopher F. 2006. [*An Introduction to Modern Econometrics Using Stata*](http://www.stata.com/bookstore/modern-econometrics-stata/) 1e. Stata Press. 
+Baum, Christopher F. 2006. [*An Introduction to Modern Econometrics Using Stata*](http://www.stata.com/bookstore/modern-econometrics-stata/) Stata Press. 
 
 Hagle, Timothy M. 1995. [*Basic Math for Social Scientists: Concepts*](https://www.amazon.com/Basic-Math-Social-Scientists-Quantitative/dp/0803958757/) Sage Publications.
 
