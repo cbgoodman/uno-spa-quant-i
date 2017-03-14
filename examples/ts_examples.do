@@ -6,7 +6,7 @@
 clear all
 set more off
 
-* Example 1
+* Example 1 -- Static Phillips Curve
 bcuse phillips, clear 
 reg inf unem
 
@@ -52,16 +52,16 @@ reg chnimp chempi gas rtwex befile6 affile6 afdec6
 reg chnimp chempi gas rtwex befile6 affile6 afdec6 feb-dec
 test (feb=0) (mar=0) (apr=0) (may=0) (jun=0) (jul=0) (aug=0) (sep=0) (oct=0) (nov=0) (dec=0)
 
-* Example 7 - Serial Correlation
+* Example 7 - Serial Correlation (Expectations Augmented Phillips Curve)
 bcuse phillips, clear
 tsset year, yearly 
 
-reg inf unem
+reg d.inf unem
 
 predict u_hat, resid
 reg u_hat l.u_hat
 
-reg inf unem
+reg d.inf unem
 * d_l is 1.324; d_U is 1.403
 estat dwatson
 
