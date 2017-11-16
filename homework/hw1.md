@@ -14,7 +14,7 @@ Question for Section 1:
 
 Questions for Section 2:
 
-1.	Using the STATA help command [help bootstrap] discuss what the bootstrap ```"summarize wage" wagebs=r(mean), saving($datadir/bs.dta, replace)```	command is doing.
+1.	Using the STATA help command [help bootstrap] discuss what the ```bootstrap "summarize wage" wagebs=r(mean), saving($datadir/bs.dta, replace)```	command is doing.
 2.	Discuss the sampling variation.
 
 Again, note that each time you run this portion of the program you will get a new sample and new set of means (Why?)
