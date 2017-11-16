@@ -4,7 +4,7 @@ Welcome to PA 9950 Quantitative Research Methods in Public Administration. This 
 ## Textbooks
 Wooldridge, Jeffrey M. 2016. [*Introductory Econometrics: A Modern Approach*](https://www.amazon.com/Introductory-Econometrics-Modern-Approach-Economics/dp/130527010X) 6e. Cengage.
 
-Angrist, Joshua and Jorn-Steffen Pischke. 2014. [*Mastering 'Metrics: The Path from Cause to Effect*](https://www.amazon.com/Mastering-Metrics-Path-Cause-Effect/dp/0691152845/) Princeton University Press.
+Angrist, Joshua and Jörn-Steffen Pischke. 2014. [*Mastering 'Metrics: The Path from Cause to Effect*](https://www.amazon.com/Mastering-Metrics-Path-Cause-Effect/dp/0691152845/) Princeton University Press.
 
 ## Useful Resources
 Baum, Christopher F. 2006. [*An Introduction to Modern Econometrics Using Stata*](http://www.stata.com/bookstore/modern-econometrics-stata/) Stata Press.
