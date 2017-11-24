@@ -11,9 +11,9 @@ This homework is to accompany program \#2. Answer all questions fully, please be
 4. Explain the variance inflation factor. How is it calculated?  When is it cause for concern?
 5. Estimate two separate models dropping faculty in one and then class size in the other. Are the variables statistically significant?
 6. Discuss the difference between the hypotheses:
-  1. ```test clsize=faculty=0```
-  2. ```test clsize-faculty=0```
-  3. ```test clsize+faculty=0```
+    1. ```test clsize=faculty=0```
+    2. ```test clsize-faculty=0```
+    3. ```test clsize+faculty=0```
 7. Manipulate the variables in the regression to provide a direct test of these hypotheses without using the ```test``` command. Compare your results.
 8. Predict both the residual and yhat for this model
   * Describe how the ```kdensity``` command works and visually interpret the results of the kernel density plots
