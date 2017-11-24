@@ -4,7 +4,7 @@
 
 This homework is to accompany program \#2. Answer all questions fully, please be sure to turn in a log file with your assignment. You should write up your results as though you are providing a reply to a reviewer.
 
-#### Question for Section 1:
+#### Questions for Section 1:
 1. Be sure to calculate the means before you estimate the regression. Re-scale the cost variable to aid in interpretation.
 2. Examine and interpret the coefficient estimates of the log(salary) regression. Discuss the difference between the estimation sample and the full sample. To what should we ascribe the difference?
 3. Discuss the hypothesis that all the parameter estimates are jointly equal to zero.
