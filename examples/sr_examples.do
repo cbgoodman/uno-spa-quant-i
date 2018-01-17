@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	January 24, 2017
-* Modified: January 24, 2017			
+* Modified: January 17, 2018			
 * ==================================
 
 clear all
@@ -20,7 +20,9 @@ reg voteA shareA
 
 * Example 4
 bcuse wage1
-*gen lwage = ln(wage)
+drop lwage
+
+gen lwage = ln(wage)
 reg lwage educ
 
 * Example 5
