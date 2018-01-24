@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	January 31, 2017
-* Modified: January 31, 2017			
+* Modified: January 24, 2018			
 * ==================================
 
 clear all
@@ -17,7 +17,7 @@ bcuse ceosal2, clear
 reg lsalary lsales c.ceoten##c.ceoten
 
 * Example 1: Partialling out
-bcuse wage1
+bcuse wage1, clear
 reg lwage educ exper
 
 reg educ exper
@@ -40,3 +40,9 @@ bcuse wage2, clear
 reg lwage educ
 reg lwage educ IQ
 reg IQ educ
+
+* OVB = _b[educ]_short - _b[educ]_long
+disp .0598392-.0391199
+
+* OVB =  _b[educ in IQ reg]*_b[IQ in long]
+disp 3.533829*.0058631
