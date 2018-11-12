@@ -7,7 +7,7 @@ Wooldridge, Jeffrey M. 2016. [*Introductory Econometrics: A Modern Approach*](ht
 Angrist, Joshua D. and Jörn-Steffen Pischke. 2014. [*Mastering 'Metrics: The Path from Cause to Effect*](https://www.amazon.com/Mastering-Metrics-Path-Cause-Effect/dp/0691152845/) Princeton University Press.
 
 ## Useful Resources
-Baum, Christopher F. 2006. [*An Introduction to Modern Econometrics Using Stata*](http://www.stata.com/bookstore/modern-econometrics-stata/) Stata Press.
+Baum, Christopher F. 2006. [*An Introduction to Modern Econometrics Using Stata*](http://www.stata.com/bookstore/modern-econometrics-stata/) Stata Press. (*highly recommended*)
 
 Cameron, A. Colin and Pravin K. Trivedi. 2010. [*Microeconometrics Using Stata, Revised Edition*](http://www.stata-press.com/books/microeconometrics-stata/) Stata Press.
 
