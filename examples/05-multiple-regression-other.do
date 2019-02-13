@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	February 14, 2017
-* Modified: February 14, 2017			
+* Modified: February 06, 2019		
 * ==================================
 
 clear all
@@ -14,7 +14,7 @@ reg wage c.exper##c.exper
 * Marginal effect of experience
 margins,dydx(exper) at(exper=(1))
 
-* Graph quadratic 
+* Graph quadratic
 margins, at(exper=(1(1)51))
 marginsplot, noci
 
@@ -31,7 +31,7 @@ reg lprice lnox ldist c.rooms##c.rooms stratio
 * Marginal effect of rooms
 margins,dydx(rooms) at(rooms=(1))
 
-* Graph quadratic 
+* Graph quadratic
 quietly margins, at(rooms=(3.56(0.1)8.78))
 marginsplot, noci
 marginsplot, noci addplot(scatter lprice rooms)
@@ -59,4 +59,3 @@ quietly sum expuhat
 generate yhatduan = r(mean)*exp(lyhat)
 
 sum salary yhatwrong yhatnormal yhatduan yhatlevels
-

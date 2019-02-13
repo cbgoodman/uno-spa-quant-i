@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	February 14, 2017
-* Modified: February 21, 2017			
+* Modified: February 06, 2019			
 * ==================================
 
 clear all
@@ -8,9 +8,9 @@ set more off
 
 * ==================================
 * Example 1
-bcuse wage1, clear 
-reg wage female educ exper tenure 
-reg wage female 
+bcuse wage1, clear
+reg wage female educ exper tenure
+reg wage female
 
 * ==================================
 * Example 2
@@ -29,13 +29,13 @@ bcuse wage1, clear
 reg lwage i.female##c.educ c.exper##c.exper c.tenure##c.tenure
 margins, dydx(female educ)
 
-* Results for the un-interacted model are almost identical 
+* Results for the un-interacted model are almost identical
 * to the marginal effects of the interacted model
 reg lwage i.female educ c.exper##c.exper c.tenure##c.tenure
 
 * ==================================
 * Example 5
-bcuse gpa3, clear 
+bcuse gpa3, clear
 reg cumgpa i.female##(c.sat c.hsperc c.tothrs) if term==2
 contrast i.female female#c.sat female#c.hsperc female#c.tothrs, overall
 
