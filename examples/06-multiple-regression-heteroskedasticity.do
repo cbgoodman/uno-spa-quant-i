@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	February 28, 2017
-* Modified: February 28, 2017			
+* Modified: February 13, 2019
 * ==================================
 
 clear all
@@ -26,14 +26,14 @@ predict y_hat, xb
 gen u_hat_sq = u_hat^2
 reg u_hat_sq lotsize sqrft bdrms
 
-* Breusch-Pagan F-test 
+* Breusch-Pagan F-test
 disp "F = " ((e(r2)/e(df_m))/((1-e(r2))/(e(N)-e(df_m)-1))) _newline "Prob > F = " Ftail(e(df_m),e(df_r),((e(r2)/e(df_m))/((1-e(r2))/(e(N)-e(df_m)-1))))
 
-* Breusch-Pagan LM-test 
+* Breusch-Pagan LM-test
 disp "LM = " e(r2)*e(N) _newline "Prob > chi2 = " chi2tail(e(df_m),e(r2)*e(N))
 
 * White LM test
-reg u_hat_sq c.lotsize##c.lotsize c.sqrft##c.sqrtft c.bdrms##c.bdrms c.lotsize#c.sqrft c.lotsize#c.bdrms c.sqrft#c.bdrms
+reg u_hat_sq c.lotsize##c.lotsize c.sqrft##c.sqrft c.bdrms##c.bdrms c.lotsize#c.sqrft c.lotsize#c.bdrms c.sqrft#c.bdrms
 disp "LM = " e(r2)*e(N) _newline "Prob > chi2 = " chi2tail(e(df_m),e(r2)*e(N))
 
 * Alternate White LM test
@@ -49,10 +49,10 @@ predict y_hat, xb
 gen u_hat_sq = u_hat^2
 reg u_hat_sq llotsize lsqrft bdrms
 
-* Breusch-Pagan F-test 
+* Breusch-Pagan F-test
 disp "F = " ((e(r2)/e(df_m))/((1-e(r2))/(e(N)-e(df_m)-1))) _newline "Prob > F = " Ftail(e(df_m),e(df_r),((e(r2)/e(df_m))/((1-e(r2))/(e(N)-e(df_m)-1))))
 
-* Breusch-Pagan LM-test 
+* Breusch-Pagan LM-test
 disp "LM = " e(r2)*e(N) _newline "Prob > chi2 = " chi2tail(e(df_m),e(r2)*e(N))
 
 * White LM-test
@@ -77,7 +77,7 @@ imtest, white
 
 * ==================================
 * Example 3 -- WLS
-bcuse saving, clear 
+bcuse saving, clear
 reg sav inc
 gen yt = sav/sqrt(inc)
 gen xt = inc/sqrt(inc)
@@ -86,7 +86,7 @@ reg sav inc [aw=1/inc], noconst
 
 * ==================================
 * Example 4 -- WLS
-bcuse 401ksubs, clear 
+bcuse 401ksubs, clear
 gen age25_sq = (age-25)^2
 
 qui reg nettfa inc if fsize==1, robust

@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	February 14, 2017
-* Modified: February 06, 2019		
+* Modified: February 06, 2019
 * ==================================
 
 clear all
@@ -12,7 +12,7 @@ bcuse wage1
 reg wage c.exper##c.exper
 
 * Marginal effect of experience
-margins,dydx(exper) at(exper=(1))
+margins, dydx(exper) at(exper=(1))
 
 * Graph quadratic
 margins, at(exper=(1(1)51))
@@ -52,7 +52,9 @@ predict yhatlevels, xb
 reg lsalary lsales lmktval ceoten
 predict lyhat, xb
 gen yhatwrong = exp(lyhat)
+
 gen yhatnormal = exp(lyhat)*exp(0.5*e(rmse)^2)
+
 quietly predict uhat, resid
 gen expuhat = exp(uhat)
 quietly sum expuhat
