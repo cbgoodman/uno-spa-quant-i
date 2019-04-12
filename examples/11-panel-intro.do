@@ -9,7 +9,7 @@ set more off
 * Example 1 -- Pooled Independent Cross Sections Over Time
 /* See http://fmwww.bc.edu/ec-p/data/wooldridge/fertil1.des */
 /* for description of the fertil1 dataset */
-bcuse fertil1
+bcuse fertil1, clear
 
 * Explore the data
 tab year
@@ -38,7 +38,7 @@ tab year
 
 * Has the effect of education on wage changed over time?
 * Has the wage gap between men and women widened over time?
-reg lwage i.year##c.educ c.exper##c.exper union i.year##i.female 
+reg lwage i.year##c.educ c.exper##c.exper union i.year##i.female
 
 * How do we interpret this?
 lincom educ + 85.year#c.educ
@@ -78,7 +78,7 @@ reg d.crmrte d.unem
 bcuse rental, clear
 
 * Wide format
-bcuse slp75_81, clear 
+bcuse slp75_81, clear
 
 * Going from wide to long
 help reshape
@@ -93,7 +93,7 @@ reshape long age educ gdhlth marr slpnap totwrk yngkid, i(indiv) j(year)
 
 reshape wide
 
-* Going from long to wide 
+* Going from long to wide
 bcuse rental, clear
 reshape wide pop enroll-y90, i(city) j(year)
 

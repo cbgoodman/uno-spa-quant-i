@@ -1,6 +1,6 @@
 * ==================================
 * Created: 	April 4, 2017
-* Modified: April 4, 2018
+* Modified: April 3, 2019
 * ==================================
 
 clear all
@@ -19,7 +19,7 @@ xtsum scrap
 tab grant year if lscrap!=.
 
 * Estimate the fixed effects regression
-reg lscrap i.year grant grant_1 i.fcode 
+reg lscrap i.year grant grant_1 i.fcode
 areg lscrap i.year grant grant_1, absorb(fcode)
 reghdfe lscrap i.year grant grant_1, absorb(fcode)
 xtreg lscrap i.year grant grant_1, fe
@@ -47,8 +47,14 @@ xtreg lwage exper married union educ black hisp i.year, fe
 * How do we get fix this?
 xtreg lwage exper married union c.educ##i.year, fe
 
-* Is education significant across the entire time perio?
+* Is education significant across the entire time period?
 testparm year#c.educ
+
+* Manual demeaning -- finish
+bysort nr: egen lwage_ave = mean(lwage)
+bysort nr: egen exper_ave = mean(exper)
+gen lwage_demaned = lwage-lwage_ave
+gen exper_demaned = exper-exper_ave
 
 * ==================================
 * Example 3 -- Fixed Effects Regression
@@ -72,7 +78,7 @@ est table pooled random fixed, drop(i.year) b(%5.3f) se(%5.3f)
 * Example 3.5 -- How to chose?
 
 * If statistically significant, use FE
-hausman fixed random 
+hausman fixed random
 
 * Testing for random effects
 xtreg lwage educ black hisp exper expersq married union i.year, re
@@ -94,6 +100,6 @@ est store fixedcluster
 est table fixed fixedrobust fixedcluster, drop(i.year) b(%5.4f) se(%5.4f) modelwidth(12)
 
 * What to do if you find autocorrelation?
-* First Differencing is more efficient than fixed effects in the 
+* First Differencing is more efficient than fixed effects in the
 * presence of serial autocorrelation
 reg d.lwage d.(educ black hisp exper expersq married union)
